@@ -2,9 +2,11 @@
   "name": "opengov-ie-swagger",
   "version": "0.0.1",
   "description": "This repo holds the swagger codegenerator for the oireachtas api",
-  "main": "dist/v1/api.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "swagger-codegen generate -i swagger.json -l typescript-node -o dist/v1"
+    "build": "swagger-codegen generate -i swagger.json -l typescript-node -o dist/v1",
+    "build-ts": "tsc"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +15,9 @@
     "request": "^2.83.0"
   },
   "devDependencies": {
-    "@types/node": "^8.0.47"
+    "@types/bluebird": "^3.5.17",
+    "@types/node": "^8.0.47",
+    "@types/request": "^2.0.7",
+    "typescript": "^2.5.3"
   }
 }
